@@ -1,0 +1,13 @@
+.bottomText{
+    font-weight: 400;
+    font-style: italic;
+    color: #dbdeff;
+    font-family: Roboto;
+    font-size: .5rem;
+    padding-right: 5%;
+    line-height: .9rem;
+    padding: 30px 0;
+    &._onWhite_background{
+        color: #959595;
+    }
+}

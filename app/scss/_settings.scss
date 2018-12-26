@@ -1,0 +1,36 @@
+@mixin resp($min, $max) {
+    @media screen and (min-width: $min + 'px') and (max-width: $max + 'px') {
+        @content
+    }
+}
+@mixin respH($min, $max) {
+    @media screen and (min-height: $min + 'px') and (max-height: $max + 'px') {
+        @content
+    }
+}
+
+
+.container {
+    @include wrapper();
+}
+
+img {
+    max-width: 100%;
+}
+
+html,
+body {
+    font-size: 24px;
+    @include resp(0, 1900){
+        font-size: 22px;
+    }
+    @include resp(0, 1800){
+        font-size: 20px;
+    }
+    @include resp(0, 1700){
+        font-size: 18px;
+    }
+    @include resp(0, 1400){
+        font-size: 14px;
+    }
+}

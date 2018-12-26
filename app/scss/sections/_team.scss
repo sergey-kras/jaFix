@@ -1,0 +1,55 @@
+.team {
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    background-size: cover;
+    background-repeat: no-repeat;
+    flex-direction: column;
+    &__content {
+        @include wrapper();
+        position: relative;
+        width: 100%;
+        max-width: 1430px;
+        padding-top: 22vh;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        flex-grow: 1;
+        @include resp(0, 1920) {
+            padding-top: 16vh; 
+            width: calc(100% - 330px);
+        }
+    }
+    &__title {
+        width: 100%;
+        margin-bottom: 60px;
+    }
+    &__peopleSlider {
+        max-width: 1300px;
+        align-self: flex-end;
+        @include resp(0, 1920) {
+            align-self: center;
+            max-width: 100%;
+        }
+    }
+    &__numberItem {
+        @include size(3);
+        @include col();
+    }
+    &__numbers {
+        @include row-flex();
+        margin-top: 71px;
+    }
+    &__bottomText{
+        @include wrapper();
+        padding-left: 130px;
+        padding-right: 0px;
+        box-sizing: border-box;
+        @include resp(0, 1920) {
+            padding-left: 0;
+            width: calc(100% - 330px);
+        }
+    }
+}
